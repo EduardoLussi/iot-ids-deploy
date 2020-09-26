@@ -98,7 +98,7 @@ export default class App extends Component {
                     <img src={imgClose} alt="Close"/>
                 </div>
                 <div className="btnExpand">
-                    <img src={imgMore} alt="Expand" onClick={expandir(id)}/>
+                    <img src={imgMore} alt="Expand" onClick={this.expandir(id)}/>
                 </div>
             </div>
         </div>
