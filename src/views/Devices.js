@@ -13,6 +13,7 @@ export default class App extends Component {
 
   async componentDidMount() {
     const res = await api.get('ports');
+    console.log(res);
     this.setState({
       devices: res.data
     });
@@ -22,7 +23,7 @@ export default class App extends Component {
     return (
       <div className="Devices">
           <ul className="DevicesList">
-              {this.state.devices.length === 0 ? <li></li> : this.state.devices.map(device => (
+              {this.state.devices.map(device => (
                 <li>
                   <Device id={this.state.devices.indexOf(device)} 
                           name={device.name} 
